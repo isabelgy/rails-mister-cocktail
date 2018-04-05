@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
+Ingredient.delete_all
+
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient =JSON.parse(open(url).read)
 
