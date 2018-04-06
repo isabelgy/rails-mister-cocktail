@@ -1,0 +1,40 @@
+.cocktail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.cocktail-pic {
+  padding: 20px;
+}
+
+.cocktail-details {
+  padding: 40px;
+}
+
+.cocktail-name p {
+  font-family: "Oswald", "Helvetica", "sans-serif";
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.cocktail-recipe {
+  margin-top: 40px;
+}
+
+.action-icon {
+  margin-top: 40px;
+}
+
+.trash-can i {
+  color: black;
+}
+
+.trash-can i:hover {
+  opacity: 0.6;
+}
+
+.add-ingredient {
+  font-family: "Lato", Helvetica, sans-serif;
+}

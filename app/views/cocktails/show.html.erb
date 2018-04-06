@@ -1,26 +1,31 @@
 
-<div class="navbar-wagon">
-  <!-- Logo -->
-<!--   <a href="/" class="navbar-wagon-brand">
-    <img src="images/logo.png" alt="logo">
-  </a> -->
-  <!-- Right Navigation -->
-  <div class="cocktail-icon">
-    <%#= link_to image_tag('../../assets/images/noun_7899_cc.png'), cocktails_path, class: "cocktail-icon-image" %>
-  </div>
 
-  <h1>Mister Cocktails</h1>
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-      <p><%= link_to "ADD COCKTAIL", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %></p>
-    <!-- Profile picture with dropdown list -->
+
+<div class="cocktail-container">
+    <div class="cocktail-pic">
+      <%= image_tag "http://imbibemagazine.com/wp-content/uploads/2018/03/coffee-tonic-julia-momose-horizontal-crdt-emma-janzen.jpg", height: 400 %>
+    </div>
+    <div class="cocktail-details">
+        <div class="cocktail-name">
+          <p><%= @cocktail.name %></p>
+        </div>
+        <div class="cocktail-recipe">
+          <p><% @cocktail.doses.each do |d|%>
+            <p>
+              <%= link_to dose_path(d), class: "trash-can", method: :delete, data: { confirm: "Are you sure?" } do  %>
+              <i class="fa fa-trash"></i>
+              <% end %>
+              <%= d.description %> of <%=d.ingredient.name%>
+            </p>
+            <!-- <p><%#= link_to "Delete", dose_path(d), method: :delete, data: { confirm: "Are you sure?" } %></p> -->
+          <% end %>
+        </div>
+        <div class="action-icon">
+          <%= link_to "Add an Ingredient", new_cocktail_dose_path(@cocktail), class: "add-ingredient" %><br>
+          <%= link_to "Back", cocktails_path %>
+        </div>
+    </div>
   </div>
 </div>
 
-<p><%= @cocktail.name %></p>
-<p><% @cocktail.doses.each do |d|%>
-  <%=d.ingredient.name%> <%= d.description %> </p>
-  <p><%= link_to "Delete", dose_path(d), method: :delete, data: { confirm: "Are you sure?" } %></p>
-<% end %>
 
-<%= link_to "Add an Ingredient", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Back to Main Menu", cocktails_path %>
