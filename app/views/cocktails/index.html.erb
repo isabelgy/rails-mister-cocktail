@@ -8,9 +8,12 @@
     <img src="images/logo.png" alt="logo">
   </a> -->
   <!-- Right Navigation -->
-  <div class="cocktail-icon">
-    <%= link_to image_tag('../../assets/images/noun_7899_cc.png'), cocktails_path, class: "cocktail-icon-image" %>
-  </div>
+ <!--  <div class="cocktail-icon">
+    <#%= link_to image_tag('/../../assets/images/noun_7899_cc.png'), cocktails_path, class: "cocktail-icon-image" %>
+  </div> -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "noun_7899_cc.png", height: 50 %>
+  <% end %>
 
   <h1>Mister Cocktails</h1>
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -30,7 +33,7 @@
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col col-xs-12 col-sm-4">
+      <div class="col col-xs-12 col-md-4s col-sm-4">
         <%#= link_to cocktail_path(cocktail), do %>
           <div class="blog-card spring-fever">
             <div class="title-content">
