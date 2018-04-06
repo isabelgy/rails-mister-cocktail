@@ -4,7 +4,7 @@ function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
     strings: ["Create Your Own Cocktail"],
     typeSpeed: 100,
-    loop: true
+    loop: false
   });
 }
 
