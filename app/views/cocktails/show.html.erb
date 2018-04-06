@@ -1,4 +1,21 @@
-<h1>Cocktail Show Page</h1>
+
+<div class="navbar-wagon">
+  <!-- Logo -->
+<!--   <a href="/" class="navbar-wagon-brand">
+    <img src="images/logo.png" alt="logo">
+  </a> -->
+  <!-- Right Navigation -->
+  <div class="cocktail-icon">
+    <%#= link_to image_tag('../../assets/images/noun_7899_cc.png'), cocktails_path, class: "cocktail-icon-image" %>
+  </div>
+
+  <h1>Mister Cocktails</h1>
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <p><%= link_to "ADD COCKTAIL", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %></p>
+    <!-- Profile picture with dropdown list -->
+  </div>
+</div>
+
 <p><%= @cocktail.name %></p>
 <p><% @cocktail.doses.each do |d|%>
   <%=d.ingredient.name%> <%= d.description %> </p>

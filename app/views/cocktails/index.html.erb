@@ -1,12 +1,78 @@
-<h1>Cocktails</h1>
-<% @cocktails.each do |c| %>
-<h2>
-<%= link_to c.name, cocktail_path(c)%>
+<%# @cocktails.each do |c| %>
+<!-- <h2><%#= link_to c.name, cocktail_path(c)%></h2> -->
+<%# end  %>
 
-</h2>
-<% end  %>
+<div class="navbar-wagon">
+  <!-- Logo -->
+<!--   <a href="/" class="navbar-wagon-brand">
+    <img src="images/logo.png" alt="logo">
+  </a> -->
+  <!-- Right Navigation -->
+  <div class="cocktail-icon">
+    <%= link_to image_tag('../../assets/images/noun_7899_cc.png'), cocktails_path, class: "cocktail-icon-image" %>
+  </div>
+
+  <h1>Mister Cocktails</h1>
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <p><%= link_to "ADD COCKTAIL", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %></p>
+    <!-- Profile picture with dropdown list -->
+  </div>
+</div>
+
+<div class="banner" style="background-image: /*linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),*/ url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1998822d443cf97d75258149476c5aa5&auto=format&fit=crop&w=1498&q=80');">
+  <div class="banner-content">
+    <p><span id="banner-typed-text"></span></p>
+  </div>
+</div>
 
 
-<!-- banner, nav bar with create cocktails -->
-<!-- add picture add ingredient-->
-<%= link_to "add cocktail", new_cocktail_path %>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col col-xs-12 col-sm-4">
+        <%#= link_to cocktail_path(cocktail), do %>
+          <div class="blog-card spring-fever">
+            <div class="title-content">
+              <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "cocktail-name"%></h2>
+            </div><!-- /.title-content -->
+            <div class="card-info">
+              <ul>
+                <% cocktail.ingredients.each do |ingredient| %>
+                  <li>
+                    <%= ingredient.name %>
+                  </li>
+                <% end %>
+              </ul>
+            </div><!-- /.card-info -->
+  <!--           <div class="gradient-overlay"></div>
+            <div class="color-overlay"></div> -->
+          </div>
+        <%# end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- <div class="blog-card spring-fever">
+  <div class="title-content">
+    <h3><%#= cocktail.name %></h3> -->
+  <!-- </div> --><!-- /.title-content -->
+  <!-- <div class="card-info"> -->
+    <%#= cocktail.ingredients.name %>
+  <!-- </div> --><!-- /.card-info -->
+ <!--  <div class="utility-info">
+    <ul class="utility-list">
+      <li class="comments">12</li>
+      <li class="date">03.12.2015</li>
+    </ul>
+  </div><!-#- /.utility-info -->
+  <!-- overlays -->
+  <!-- <div class="gradient-overlay"></div>
+  <div class="color-overlay"></div>
+</div> --><!-- /.blog-card -->
+
+
+
+
+

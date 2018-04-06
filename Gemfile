@@ -7,7 +7,11 @@ end
 
 gem 'bootstrap-sass'
 gem 'simple_form'
-gem 'json'
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass'
+gem 'cloudinary'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record
