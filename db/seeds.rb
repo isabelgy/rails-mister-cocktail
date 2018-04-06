@@ -16,3 +16,9 @@ ingredient["drinks"].each_index do |i|
   item = ingredient["drinks"][i]['strIngredient1']
   Ingredient.create(name: item)
 end
+
+url = "http://imbibemagazine.com/wp-content/uploads/2018/02/the-ruse-julep-vertical-crdt-julie-soefer-web.jpeg"
+
+cocktail = Cocktail.new(name: "The Ruse")
+cocktail.remote_photo_url = url
+cocktail.save
