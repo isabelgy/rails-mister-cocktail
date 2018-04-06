@@ -1,6 +1,8 @@
-<h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p>
-
+<div class="form-container">
+<div>
+<h1>Enter a New Cocktail</h1>
+</div>
+<div>
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.error_notification %>
 
@@ -9,6 +11,8 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, "Submit" %>
   </div>
 <% end %>
+</div>
+</div>
