@@ -12,6 +12,24 @@
   h1 {
     margin-top: 7.5px;
   }
+
+  h1:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.navbar-header {
+  color: black;
+}
+
+.navbar-header:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.cocktail-icon {
+  height: 60px;
 }
 
 /* Logo */
