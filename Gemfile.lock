@@ -48,6 +48,10 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     cloudinary (1.9.1)
       aws_cf_signer
       rest-client
@@ -66,6 +70,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
     globalid (0.4.1)
@@ -217,8 +223,10 @@ DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass
   byebug
+  carrierwave (~> 1.2)
   cloudinary
   coffee-rails (~> 4.2)
+  figaro
   font-awesome-sass
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
