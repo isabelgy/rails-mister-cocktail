@@ -3,7 +3,8 @@
 
 <div class="cocktail-container">
     <div class="cocktail-pic">
-      <%= image_tag "http://imbibemagazine.com/wp-content/uploads/2018/03/coffee-tonic-julia-momose-horizontal-crdt-emma-janzen.jpg", height: 400 %>
+      <%= cl_image_tag @cocktail.photo, height: 400, width: 400, crop: :fit %>
+      <%#= image_tag "http://imbibemagazine.com/wp-content/uploads/2018/03/coffee-tonic-julia-momose-horizontal-crdt-emma-janzen.jpg", height: 400 %>
     </div>
     <div class="cocktail-details">
         <div class="cocktail-name">
@@ -22,6 +23,8 @@
         </div>
         <div class="action-icon">
           <%= link_to "Add an Ingredient", new_cocktail_dose_path(@cocktail), class: "add-ingredient" %><br>
+          <%#= link_to "Delete", cocktails_path, method: :delete, data: { confirm: "Are you sure?" } %>
+
           <%= link_to "Back", cocktails_path %>
         </div>
     </div>
