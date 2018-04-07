@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-Ingredient.delete_all
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredient =JSON.parse(open(url).read)
@@ -17,8 +16,8 @@ ingredient["drinks"].each_index do |i|
   Ingredient.create(name: item)
 end
 
-url = "http://imbibemagazine.com/wp-content/uploads/2018/02/the-ruse-julep-vertical-crdt-julie-soefer-web.jpeg"
+url_photo = "http://imbibemagazine.com/wp-content/uploads/2018/02/the-ruse-julep-vertical-crdt-julie-soefer-web.jpeg"
 
 cocktail = Cocktail.new(name: "The Ruse")
-cocktail.remote_photo_url = url
+cocktail.remote_photo_url = url_photo
 cocktail.save
